@@ -1,0 +1,76 @@
+<!-- /* Copyright (c) 2015 Christian Glahn and HTW Chur, MIT License */ -->
+<p>
+    <!-- Task Descirption should be placed in the wrapping document or here,
+         multiple paragraphs are allowed -->
+</p>
+
+<div id="warning-no-privileges" class="alert alert-danger hidden">
+    <div lang="de">
+        <b>Achtung!</b> Sie haben keine Rechte, diese Aufgabe zu lösen!
+    </div>
+    <div lang="en">
+        <b>Attention!</b> You are not allowed to solve this assignment!
+    </div>
+</div>
+<div id="warning-already-taken" class="alert alert-warning hidden">
+    <div lang="de">
+        Sie haben diese Aufgabe bereits gelöst.
+    </div>
+    <div lang="en">
+        You have solved this assignment already.
+    </div>
+</div>
+
+<div id="itemlist">
+<div id="itemlist_list" class="row-fluid" style="cursor: move;"></div>
+</div>
+<div id="ideacollector" class="hidden"><div><input id="itemlist_new" style="width: 100%;" placeholder="Ideen hier eingeben" type="text"></div>
+<div id="itemlist_ready" class="btn-large btn-primary span4" type="button"><span lang="de">Fertig</span><span lang="en">Ready</span></div>
+</div>
+
+<div id="predefitems" class="hidden">
+    <!-- any number of terms is allowed here.
+    * all predefined items have to have the class "predefineditem"
+    * the additional class name is used for checking correct assignments
+    * it is possible to change the number of assignment blocks
+    -->
+<div class="predefineditem block1">Term 1</div>
+<div class="predefineditem block1">Term 2</div>
+
+<div class="predefineditem block2">Term 3</div>
+<div class="predefineditem block2">Term 4</div>
+
+<div class="predefineditem block3">Term 5</div>
+<div class="predefineditem block3">Term 6</div>
+
+</div>
+<div id="assigndata" class="clearfix hidden">
+    <div class="row-fluid">
+<div id="block1" class="dropblock alert alert-warning alert-block span4">
+    <h3>Block 1</h3>
+    <div id="block1_list" class="row-fluid droplist"></div>
+</div>
+<div id="block2" class="dropblock alert alert-danger alert-block  span4">
+    <h3>Block 2</h3>
+<div id="block2_list" class="row-fluid droplist"></div>
+</div>
+<div id="block3" class="dropblock alert alert-success alert-block  span4">
+    <h3>Block 3</h3>
+    <div id="block3_list" class="row-fluid droplist"></div>
+</div>
+    </div>
+    <div id="assign_finish" class="clearfix hidden">
+<div id="assign_ready" class="btn-large btn-primary span4" type="button"><span lang="de">Fertig</span><span lang="en">Ready</span></div>
+    </div>
+</div>
+<div id="results" class="clearfix row-fluid hidden"><div class="alert alert-block alert-info ">
+<h3><span lang="de">Geschafft!</span><span lang="en">Completed!</span></h3>
+<div class="span6"><span lang="de">Eigene Begriffe</span><span lang="en">Own Terms</span>: <span id="ownterms"></span></div>
+<div><span lang="de">Richtig zugeordnete Begriffe</span><span lang="en">Correct assignments</span>: <span id="corrterms"></span>/<span id="setterms"></span></div>
+</div>
+</div>
+<!-- TODO: include RSD, LRS and context detection to the system -->
+<script type="text/javascript" src="/tla/js/rsd.js"></script>
+<script type="text/javascript" src="/tla/js/lrs.js"></script>
+<!-- link the component logic --> 
+<script type="text/javascript" src="/tla/js/extras/assign.js"></script>
